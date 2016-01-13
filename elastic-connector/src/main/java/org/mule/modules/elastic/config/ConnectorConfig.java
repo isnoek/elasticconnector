@@ -8,49 +8,45 @@ import org.mule.api.annotations.param.Default;
 public class ConnectorConfig {
 
     /**
-     * Greeting message
+     * Elastichost
      */
     @Configurable
-    @Default("Hello")
-    private String greeting;
-
-    /**
-     * Reply message
-     */
+    @Default("localhost")
+    private String ElasticHost;
+    
     @Configurable
-    @Default("How are you?")
-    private String reply;
-
-    /**
-     * Set greeting message
-     *
-     * @param greeting the greeting message
-     */
-    public void setGreeting(String greeting) {
-        this.greeting = greeting;
+    @Default("9300")
+    private String ElasticPort;
+    
+    @Configurable
+    @Default("elasticsearch")
+    private String ElasticCluster;
+    
+    //getters and setters
+    
+    public void setElasticHost(String aHostName) {
+    	this.ElasticHost=aHostName;
     }
-
-    /**
-     * Get greeting message
-     */
-    public String getGreeting() {
-        return this.greeting;
+    
+    public String getElasticHost() {
+    	return this.ElasticHost;
     }
-
-    /**
-     * Set reply
-     *
-     * @param reply the reply
-     */
-    public void setReply(String reply) {
-        this.reply = reply;
+    
+    public void setElasticPort(String aPortNumber) {
+    	this.ElasticPort=aPortNumber;
     }
-
-    /**
-     * Get reply
-     */
-    public String getReply() {
-        return this.reply;
+    
+    public String getElasticPort() {
+    	return this.ElasticPort;
     }
-
+    
+    public void setElasticCluster(String aClusterName) {
+    	this.ElasticCluster=aClusterName;
+    }
+    
+    public String getElasticCluster() {
+    	return this.ElasticCluster;
+    }
+    
+    
 }

@@ -22,11 +22,11 @@ public class ElasticConnector {
      * @return A greeting message
      */
     @Processor
-    public String greet(String friend) {
+    public String Insert(String friend) {
         /*
          * MESSAGE PROCESSOR CODE GOES HERE
          */
-        return config.getGreeting() + " " + friend + ". " + config.getReply();
+        return "";
     }
 
     public ConnectorConfig getConfig() {
